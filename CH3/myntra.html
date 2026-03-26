@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <STYLE>
+    #button1 {
+      background-color: rgb(163, 231, 150);
+      border:none;
+      padding: 5px 16px;
+      border-radius: 9px;
+    }
+
+    #button2 {
+      background-color: white;
+      border:2px solid black;
+      padding: 5px 16px;
+      border-radius: 9px;
+      padding: 4px 38px;
+      font-size: 12px;
+    }
+
+    #button3 {
+      background-color: rgb(163, 231, 150);
+      border:none;
+      padding: 5px 20px;
+      border-radius: 9px;
+    }
+  </STYLE>
+</head>
+<body>
+  <button id="button1" class="button" onclick="bagCount++; document.querySelector('#bagCount').innerText = 'Your Bag has ' + bagCount + ' items';">Add to Bag</button>
+
+  <button id="button2" class="button" onclick="bagCount-=1; document.querySelector('#bagCount').innerText = 'Your Bag has ' + bagCount + ' items';">MOVE TO WISHLIST</button>
+
+  <button id="button3" class="button" onclick="bagCount+=2; document.querySelector('#bagCount').innerText = 'Your Bag has ' + bagCount + ' items';">Add 1+1 sale item</button><br>
+
+  <H2 id="bagCount"></H2>
+</body>
+<script>
+  
+  let bagCount = 0;
+  document.querySelector('#bagCount').innerText = 'Your Bag has ' + bagCount + ' items';
+</script>
+</html>
