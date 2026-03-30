@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+  let age = 16;
+  let gender = "female";
+  let metroTicketPrice;
+  if(age < 5 && age > 0) {
+    metroTicketPrice = 0;
+  } else if(age <=8 &&  age > 0 && gender==='female') {
+    metroTicketPrice = 8;
+  } else if(age <=8 &&  age > 0 && gender==='male') {
+    metroTicketPrice = 15;
+  } else if(age > 65 && gender==='female') {
+    metroTicketPrice = 8;
+  } else if(age > 65 && gender==='male') {
+    metroTicketPrice = 9;
+  } else if (age > 8 && age <= 65 && gender==='female') {
+    metroTicketPrice = 15;
+  } else if (age > 8 && age <= 65 && gender==='male') {
+    metroTicketPrice = 30;
+  } else {
+    metroTicketPrice = "Invalid age";
+  }
+
+
+  if (typeof metroTicketPrice === "number") {
+    console.log(`Your metro ticket price is ₹${metroTicketPrice}`);
+  } else {
+    console.log(metroTicketPrice);
+  }
+
+  
+</script>
+</html>
