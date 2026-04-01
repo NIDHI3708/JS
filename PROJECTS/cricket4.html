@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bat Ball Stump Game</h1>
+
+  <div id="game"></div>
+
+  <button id="button1" class="button" onclick="let userMove = 'Bat'; let computerMove = generateComputerChoice(); showResult(userMove, computerMove);">Bat</button>
+
+  <button id="button2" class="button" onclick="userMove = 'Ball'; computerMove = generateComputerChoice(); showResult(userMove, computerMove);">Ball</button>
+
+  <button id="button3" class="button" onclick="userMove = 'Stump'; computerMove = generateComputerChoice(); showResult(userMove, computerMove);">Stump</button>
+
+   
+
+</body>
+<script>
+  
+  function generateComputerChoice() {
+    let randomNumber = Math.random()*3;
+    if (randomNumber >0 && randomNumber <= 1) { 
+    return 'Bat'
+    } else if (randomNumber >1 && randomNumber <= 2) {  return 'Ball'
+    } else { return 'Stump'
+    }
+  }
+
+
+  function getResult(userMove, computerMove) {
+    if (userMove==="Bat") {
+      if (computerMove === "Bat") {
+        return "It is a tie!";
+      } else if (computerMove === "Ball") {
+        return "You have won!";
+      } else {
+        return "You Lost!";
+      }
+    }
+    else if (userMove === "Ball") {
+      if (computerMove === "Bat") {
+        return "You Lost!";
+      } else if (computerMove === "Ball") {
+        return "It is a tie!";
+      } else {
+        return "You have won!";
+      }
+    }
+    else {
+      if (computerMove === "Bat") {
+        return "You have won!";
+      } else if (computerMove === "Ball") {
+        return "You Lost!";
+      } else {
+        return "It is a tie!";
+      }
+    }
+  }
+
+  function showResult(userMove, computerMove) {
+    const resultMessage = getResult(userMove, computerMove);
+    alert(`You have chosen ${userMove}. Computer choice is ${computerMove} and ${resultMessage}`);
+  }
+</script>
+</html>
