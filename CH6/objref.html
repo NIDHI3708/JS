@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let a = 5;
+    let b = a;
+    console.log(`a=${a}, b=${b}`);
+    a = 10;
+    console.log(`a=${a}, b=${b}`);
+
+
+    let x = { value: 5 };
+    let y = x;
+    console.log(`x=${x.value}, y=${y.value}`);
+    x.value = 10;
+    console.log(`x=${x.value}, y=${y.value}`);
+
+    //this is because x and y are referencing the same object in memory, so when we change the value of x.value, it also changes the value of y.value because they are both pointing to the same object.
+  </script>
+</body>
+</html>

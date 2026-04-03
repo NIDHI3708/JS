@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let product = {
+      name: "Laptop",
+      price: 999.99,
+      description: "A high-performance laptop for work and play.",
+      inStock: true,
+      displayPrice: function() {
+        console.log("The price of the " + product.name + " is $" + product.price);
+      }
+    };
+    product.displayPrice();
+  </script>
+</body>
+</html>
