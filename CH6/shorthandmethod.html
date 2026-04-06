@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+    let product = { name: "Laptop", price: 999.99, displayPrice: function() { return `$${this.price.toFixed(2)}`; }, stock: 10 };
+    let product2 = { name: "Phone", price: 599.99, displayPrice: function() { return `$${this.price.toFixed(2)}`; }, stock: 20 };
+    console.log(product.displayPrice());
+    console.log(product2.displayPrice());
+  </script>
+</body>
+</html>
