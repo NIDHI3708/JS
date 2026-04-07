@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function greeting(name = 'Dear') {
+    let date = new Date();
+    let time = date.getHours();
+
+    if (time < 12 && time >= 4) {
+      document.write(`Good Morning, ${name}!`);
+    } else if (time < 18) {
+      document.write(`Good Afternoon, ${name}!`);
+    } else {
+      document.write(`Good Night, ${name}!`);
+    }
+  }
+
+  greeting('Nidhi');
+  </script>
+</body>
+</html>
