@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="myButton" style="height: 50px; width: 50px;">0</button>
+
+
+<script>
+  let button = document.getElementById('myButton');
+  let count = Number(localStorage.getItem("count")) || 0;
+
+  function updateButton() {
+    button.textContent = count;
+    if (count === 0) {
+      button.style.backgroundColor = ""; // none
+    } else if (count % 2 === 0) {
+      button.style.backgroundColor = "lightblue";
+    } else {
+      button.style.backgroundColor = "lightcoral";
+    }
+  }
+
+  updateButton(); // Set initial state on load
+
+  button.onclick = function() {
+    count++;
+    updateButton();
+    localStorage.setItem("count", count);
+  }
+
+
+</script>
+</body>
+</html>
